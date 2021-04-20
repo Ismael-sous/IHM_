@@ -32,20 +32,14 @@ public class Main extends Application
         Parent root2 = FXMLLoader.load(getClass().getResource("listeEtu.fxml"));
         scene2 = new Scene(root2);
 
-
-        Scene scene = new Scene(root);
-
-
-        stage.setScene(scene);
-        // Show the Stage (window)
-        stage.show();
+        window.setTitle("Gphy");
+        window.setScene(scene1);
+        window.show();
 
     }
-
         public static Stage getWindow(){
             return window;
         }
-
         public static void main(String[] args) {
             launch(args);
         }
