@@ -25,6 +25,7 @@ public class StepTwoController
     
     @FXML
     private Label myLabel;
+
     
     /**
      * This will be executed when the button is clicked
@@ -36,5 +37,15 @@ public class StepTwoController
         // Counts number of button clicks and shows the result on a label
         count = count + 1;
         myLabel.setText(Integer.toString(count));
+    }
+
+    @FXML
+    private void list(){
+
+    }
+
+    @FXML
+    private void addStudent(){
+
     }
 }
