@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
 /**
@@ -41,8 +42,28 @@ public class Controller
 
     @FXML
     private void list(){
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Demo.fxml"));
+           // Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+        //    stage.initModality(Modality.APPLICATION_MODAL);
+         //   stage.initStyle(StageStyle.UNDECORATED);
+            stage.setTitle("ABC");
+          //  stage.setScene(new Scene(root1));
+            stage.show();
 
     }
+
+/*    public void pressButton(ActionEvent event) throws Exception {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/fxml/A.fxml"));
+            Parent root1 = (Parent) fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch(Exception e) {
+            e.printStackTrace();
+        }
+    }*/
 
     @FXML
     private void addStudent(){
