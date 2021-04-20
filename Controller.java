@@ -18,7 +18,7 @@ import javafx.fxml.Initializable;
  * @author Patrick GIRARD
  * @version 22/03/2020
  */
-public class StepTwoController
+public class Controller
 {
     // We keep track of the count, and label displaying the count:
     private int count = 0;
