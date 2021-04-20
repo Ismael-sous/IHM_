@@ -1,5 +1,5 @@
 #BlueJ class context
-comment0.target=StepTwoFX
+comment0.target=Main
 comment0.text=\n\ The\ StepTwo\ of\ JavafX\ tutorial\n\ Linking\ FXML\ and\ java\ code\ via\ java\n\n\ @author\ Patrick\ Girard\n\ @version\ 22/03/2020\n
 comment1.params=stage
 comment1.target=void\ start(javafx.stage.Stage)
