@@ -1,14 +1,9 @@
-import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -41,10 +36,10 @@ public class Controller implements Initializable
         stage.setTitle("Liste Etudiant");
         stage.show();
         TableColumn prenom = new TableColumn("Prénom");
-        TableColumn nom = new TableColumn("Nom");
-        TableColumn annee = new TableColumn("Année");
-        TableColumn promo = new TableColumn("Promotion");
-        TableColumn option = new TableColumn("Option");
+        TableColumn<Etudiant, String> nom = new TableColumn<Etudiant, String>("Nom");
+        TableColumn<Etudiant, String> annee = new TableColumn<>("Année");
+        TableColumn<Etudiant, String> promo = new TableColumn<Etudiant, String>("Promotion");
+        TableColumn<Etudiant, String> option = new TableColumn<>("Option");
 
         TableView myTable = (TableView) loader.getNamespace().get("myTable");
         myTable.getColumns().addAll(prenom, nom, annee, promo,option);
@@ -80,13 +75,27 @@ public class Controller implements Initializable
     private void delete(){
     }
 
+
     @FXML
     private void modify(){
+
     }
 
+    @FXML
+    private void back() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/accueil.fxml"));
+        Parent part = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(part);
+        stage.setScene(scene);
+        stage.setTitle("GPHY");
+        stage.show();
+    }
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
 
     }
 
