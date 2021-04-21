@@ -38,6 +38,7 @@ public class Controller
         Stage stage = new Stage();
         Scene scene = new Scene(part);
         stage.setScene(scene);
+        stage.setTitle("Liste Etudiant");
         stage.show();
     }
 
