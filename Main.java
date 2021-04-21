@@ -33,7 +33,7 @@ public class Main extends Application
     public void start(Stage stage) throws Exception
     {
         // Building the FXML hierarchy
-        Parent root = FXMLLoader.load(getClass().getResource("accueil.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ajout.fxml"));
 
         // JavaFX must have a Scene (window content) inside a Stage (window)
         Scene scene = new Scene (root);
