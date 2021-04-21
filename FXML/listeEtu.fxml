@@ -21,7 +21,7 @@
             </Label>
             <ImageView fx:id="deleteButton" disable="true" fitHeight="42.0" fitWidth="36.0" layoutX="525.0" layoutY="13.0" onMouseClicked="#delete" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@ressources/img/delete.png" />
+                  <Image url="@../ressources/img/delete.png" />
                </image>
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -29,7 +29,7 @@
             </ImageView>
             <ImageView fx:id="modifyButton" fitHeight="35.0" fitWidth="36.0" layoutX="473.0" layoutY="14.0" onMouseClicked="#modify" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@ressources/img/modify.png" />
+                  <Image url="@../ressources/img/delete.png" />
                </image>
             </ImageView>
          </children></AnchorPane>

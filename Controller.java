@@ -1,5 +1,3 @@
-
-
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -14,9 +12,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-
 import javafx.fxml.Initializable;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -37,7 +33,7 @@ public class Controller implements Initializable
     public void list() throws IOException
     {
 //        Parent part = FXMLLoader.load(getClass().getResource("listeEtu.fxml"));
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("listeEtu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/listeEtu.fxml"));
         Parent part = loader.load();
         Stage stage = new Stage();
         Scene scene = new Scene(part);
@@ -68,7 +64,16 @@ public class Controller implements Initializable
     }
 
     @FXML
-    private void addStudent(){
+    private void addStudent() throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ajout.fxml"));
+        Parent part = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(part);
+        stage.setScene(scene);
+        stage.setTitle("Ajout Etudiant");
+        stage.show();
+
     }
 
     @FXML
