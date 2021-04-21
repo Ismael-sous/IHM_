@@ -38,7 +38,7 @@ public class Main extends Application
         // JavaFX must have a Scene (window content) inside a Stage (window)
         Scene scene = new Scene (root);
 
-        stage.setTitle("FXML Counter V1");
+        stage.setTitle("GPhy");
         stage.getIcons().add(new Image("file:ressources/img/world-map.png"));
 
         stage.setScene(scene);
