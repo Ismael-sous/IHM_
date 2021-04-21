@@ -91,17 +91,17 @@
                   </Label>
                   <ImageView fitHeight="20.0" fitWidth="33.0" layoutX="85.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ressources/img/required.png" />
+                        <Image url="@../ressources/img/required.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="133.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ressources/img/required.png" />
+                        <Image url="@../ressources/img/required.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="41.0" fitWidth="20.0" layoutX="197.0" layoutY="128.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@ressources/img/required.png" />
+                        <Image url="@../ressources/img/required.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="20.0" fitWidth="46.0" layoutX="108.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
