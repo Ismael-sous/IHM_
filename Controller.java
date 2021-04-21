@@ -30,8 +30,14 @@ public class Controller implements Initializable
     private Button listButton;
 
     @FXML
-    public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    public void list() throws IOException
+    {
+        Parent part = FXMLLoader.load(getClass().getResource("FXML/listeEtu.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(part);
+        stage.setScene(scene);
+        stage.setTitle("Liste Etudiant");
 
         TableColumn<Etudiant, String> prenom = new TableColumn<>("Prénom");
         TableColumn<Etudiant, String> nom = new TableColumn<>("Nom");
@@ -57,17 +63,9 @@ public class Controller implements Initializable
         option.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("option"));
 
         tableauListeEtu.setItems(data);
-    }
 
-    @FXML
 
-    public void list() throws IOException
-    {
-        Parent part = FXMLLoader.load(getClass().getResource("listeEtu.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(part);
-        stage.setScene(scene);
-        stage.setTitle("Liste Etudiant");
+
         stage.show();
 
     }
@@ -85,6 +83,9 @@ public class Controller implements Initializable
     }
 
 
+    @FXML
+    public void initialize(URL url, ResourceBundle resourceBundle) {
 
+    }
 
 }
