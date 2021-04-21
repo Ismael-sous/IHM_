@@ -29,15 +29,12 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable
 {
     private Main mainApp;
-    @FXML private TableView myTable;
-
     @FXML
     private Button listButton;
 
     public void list() throws IOException
     {
-//        Parent part = FXMLLoader.load(getClass().getResource("listeEtu.fxml"));
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("listeEtu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/listeEtu.fxml"));
         Parent part = loader.load();
         Stage stage = new Stage();
         Scene scene = new Scene(part);
@@ -49,9 +46,11 @@ public class Controller implements Initializable
         TableColumn annee = new TableColumn("Année");
         TableColumn promo = new TableColumn("Promotion");
         TableColumn option = new TableColumn("Option");
+        TableColumn select = new TableColumn("Sélectionner");
 
         TableView myTable = (TableView) loader.getNamespace().get("myTable");
-        myTable.getColumns().addAll(prenom, nom, annee, promo,option);
+
+        myTable.getColumns().addAll(prenom, nom, annee, promo,option,select);
 
         final ObservableList<Etudiant> data = FXCollections.observableArrayList(
                 new Etudiant("Jacob","Smith",1999,"M1","Biotech"),
@@ -62,13 +61,14 @@ public class Controller implements Initializable
         annee.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("annee"));
         promo.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("promo"));
         option.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("option"));
-
+        select.setCellValueFactory(new PropertyValueFactory<Etudiant,CheckBox>("select"));
         myTable.setItems(data);
 
     }
 
     @FXML
     private void addStudent(){
+
     }
 
     @FXML

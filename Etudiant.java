@@ -1,12 +1,15 @@
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.scene.control.CheckBox;
+
 
 public class Etudiant {
-    public  SimpleStringProperty prenom;
-    public SimpleStringProperty nom;
-    public SimpleIntegerProperty annee;
-    public SimpleStringProperty promo;
-    public SimpleStringProperty option;
+    private SimpleStringProperty prenom;
+    private SimpleStringProperty nom;
+    private SimpleIntegerProperty annee;
+    private SimpleStringProperty promo;
+    private SimpleStringProperty option;
+    private CheckBox select;
 
     public Etudiant(String prenom, String nom, int annee, String promo, String option) {
         this.prenom = new SimpleStringProperty(prenom);
@@ -14,6 +17,15 @@ public class Etudiant {
         this.annee = new SimpleIntegerProperty(annee);
         this.promo = new SimpleStringProperty(promo);
         this.option = new SimpleStringProperty(option);
+        this.select = new CheckBox();
+    }
+
+    public CheckBox getSelect() {
+        return select;
+    }
+
+    public void setSelect(CheckBox select) {
+        this.select = select;
     }
 
     public String getPrenom() {
