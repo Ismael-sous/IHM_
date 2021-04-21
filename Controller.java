@@ -67,7 +67,15 @@ public class Controller implements Initializable
     }
 
     @FXML
-    private void addStudent(){
+    private void addStudent() throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ajout.fxml"));
+        Parent part = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(part);
+        stage.setScene(scene);
+        stage.setTitle("Ajout Etudiant");
+        stage.show();
 
     }
 
