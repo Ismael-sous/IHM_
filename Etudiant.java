@@ -2,11 +2,11 @@ import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
 
 public class Etudiant {
-    private SimpleStringProperty prenom;
-    private SimpleStringProperty nom;
-    private SimpleIntegerProperty annee;
-    private SimpleStringProperty promo;
-    private SimpleStringProperty option;
+    public  SimpleStringProperty prenom;
+    public SimpleStringProperty nom;
+    public SimpleIntegerProperty annee;
+    public SimpleStringProperty promo;
+    public SimpleStringProperty option;
 
     public Etudiant(String prenom, String nom, int annee, String promo, String option) {
         this.prenom = new SimpleStringProperty(prenom);

@@ -42,7 +42,6 @@ public class Main extends Application
         stage.getIcons().add(new Image("file:ressources/img/world-map.png"));
 
         stage.setScene(scene);
-        // Show the Stage (window)
         stage.show();
 
     }
