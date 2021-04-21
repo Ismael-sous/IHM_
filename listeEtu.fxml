@@ -16,11 +16,11 @@
          <children>
             <TableView fx:id="tableauListeEtu" layoutX="14.0" layoutY="63.0" prefHeight="200.0" prefWidth="428.0">
               <columns>
-                <TableColumn prefWidth="65.99999618530273" text="Nom" />
-                <TableColumn prefWidth="84.66666412353516" text="Prénom" />
-                  <TableColumn prefWidth="123.33335876464844" text="Année de naissance" />
-                  <TableColumn prefWidth="82.0" text="Promotion" />
-                  <TableColumn prefWidth="75.0" text="Option" />
+                <TableColumn fx:id="columnN" prefWidth="65.99999618530273" text="Nom" />
+                <TableColumn fx:id="columnP" prefWidth="84.66666412353516" text="Prénom" />
+                  <TableColumn fx:id="columAN" prefWidth="123.33335876464844" text="Année de naissance" />
+                  <TableColumn fx:id="columnPromo" prefWidth="82.0" text="Promotion" />
+                  <TableColumn fx:id="columnOption" prefWidth="75.0" text="Option" />
               </columns>
             </TableView>
             <Label alignment="CENTER" layoutX="156.0" layoutY="14.0" prefHeight="35.0" prefWidth="286.0" style="-fx-background-color: #393647; -fx-background-radius: 10mm;" text="Liste des étudiants" textFill="WHITE">
