@@ -1,22 +1,13 @@
-
-
-import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.geometry.Insets;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-
 import javafx.fxml.Initializable;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,11 +20,14 @@ import java.util.ResourceBundle;
 public class Controller implements Initializable
 {
     private Main mainApp;
+    @FXML private TableView myTable;
+
     @FXML
     private Button listButton;
 
     public void list() throws IOException
     {
+//        Parent part = FXMLLoader.load(getClass().getResource("listeEtu.fxml"));
         FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/listeEtu.fxml"));
         Parent part = loader.load();
         Stage stage = new Stage();
@@ -42,15 +36,13 @@ public class Controller implements Initializable
         stage.setTitle("Liste Etudiant");
         stage.show();
         TableColumn prenom = new TableColumn("Prénom");
-        TableColumn nom = new TableColumn("Nom");
-        TableColumn annee = new TableColumn("Année");
-        TableColumn promo = new TableColumn("Promotion");
-        TableColumn option = new TableColumn("Option");
-        TableColumn select = new TableColumn("Sélectionner");
+        TableColumn<Etudiant, String> nom = new TableColumn<Etudiant, String>("Nom");
+        TableColumn<Etudiant, String> annee = new TableColumn<>("Année");
+        TableColumn<Etudiant, String> promo = new TableColumn<Etudiant, String>("Promotion");
+        TableColumn<Etudiant, String> option = new TableColumn<>("Option");
 
         TableView myTable = (TableView) loader.getNamespace().get("myTable");
-
-        myTable.getColumns().addAll(prenom, nom, annee, promo,option,select);
+        myTable.getColumns().addAll(prenom, nom, annee, promo,option);
 
         final ObservableList<Etudiant> data = FXCollections.observableArrayList(
                 new Etudiant("Jacob","Smith",1999,"M1","Biotech"),
@@ -61,7 +53,7 @@ public class Controller implements Initializable
         annee.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("annee"));
         promo.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("promo"));
         option.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("option"));
-        select.setCellValueFactory(new PropertyValueFactory<Etudiant,CheckBox>("select"));
+
         myTable.setItems(data);
 
     }
@@ -83,13 +75,27 @@ public class Controller implements Initializable
     private void delete(){
     }
 
+
     @FXML
     private void modify(){
+
     }
 
+    @FXML
+    private void back() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/accueil.fxml"));
+        Parent part = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(part);
+        stage.setScene(scene);
+        stage.setTitle("GPHY");
+        stage.show();
+    }
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+
 
     }
 
