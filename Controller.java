@@ -26,7 +26,7 @@ public class Controller
 
     @FXML
     private void list() throws IOException {
-        Main.getWindow().setScene(Main.scene2);
+       // Main.getWindow().setScene(Main.scene2);
     }
 
     @FXML

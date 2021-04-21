@@ -1,6 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
 
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -13,9 +43,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+<VBox alignment="TOP_CENTER" fillWidth="false" prefHeight="599.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="399.0" prefWidth="683.0" style="-fx-background-color: #393647;" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="633.0" prefWidth="907.0" style="-fx-background-color: #393647;" VBox.vgrow="ALWAYS">
       <children>
             <Pane layoutY="-1.0" prefHeight="66.0" prefWidth="640.0" style="-fx-background-color: #ededed;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
                <children>
@@ -24,7 +54,7 @@
                         <Image url="@ressources/img/th.jpg" />
                      </image>
                   </ImageView>
-                  <TextFlow layoutX="118.0" layoutY="16.0" prefHeight="34.0" prefWidth="405.0" style="-fx-background-color: #393647; -fx-background-radius: 10mm;" textAlignment="CENTER">
+                  <TextFlow layoutX="231.0" layoutY="15.0" prefHeight="34.0" prefWidth="405.0" style="-fx-background-color: #393647; -fx-background-radius: 10mm;" textAlignment="CENTER">
                      <children>
                     <Label alignment="CENTER" prefHeight="27.0" prefWidth="400.0" style="&#10;" text="Bienvenue dans votre gestionnaire d'étudiants" textAlignment="CENTER" textFill="WHITE" wrapText="false">
                       <font>
@@ -36,15 +66,15 @@
                     </Label>
                      </children>
                   </TextFlow>
-                  <ImageView fitHeight="66.0" fitWidth="135.0" layoutX="550.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="66.0" fitWidth="135.0" layoutX="800.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@ressources/img/Logo-Master-GPhy.png" />
                      </image>
                   </ImageView>
                </children>
             </Pane>
-            <Button fx:id="listButton" alignment="CENTER" layoutX="250.0" layoutY="129.0" mnemonicParsing="false" onMouseClicked="#list" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #393647; -fx-border-color: white;" text="Liste des étudiants" textFill="#faf6f6" />
-            <Button fx:id="addButton" alignment="CENTER" layoutX="250.0" layoutY="237.0" mnemonicParsing="false" onMouseClicked="#addStudent" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #393647; -fx-border-color: white;" text="Ajouter un etudiant" textFill="WHITE" />
+            <Button fx:id="listButton" alignment="CENTER" layoutX="364.0" layoutY="141.0" mnemonicParsing="false" onMouseClicked="#list" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #393647; -fx-border-color: white;" text="Liste des étudiants" textFill="#faf6f6" />
+            <Button fx:id="addButton" alignment="CENTER" layoutX="364.0" layoutY="271.0" mnemonicParsing="false" onMouseClicked="#addStudent" prefHeight="57.0" prefWidth="140.0" style="-fx-background-color: #393647; -fx-border-color: white;" text="Ajouter un etudiant" textFill="WHITE" />
       </children>
     </AnchorPane>
   </children>
