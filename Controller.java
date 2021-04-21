@@ -40,9 +40,9 @@ public class Controller implements Initializable
         TableColumn<Etudiant, String> annee = new TableColumn<>("Année");
         TableColumn<Etudiant, String> promo = new TableColumn<Etudiant, String>("Promotion");
         TableColumn<Etudiant, String> option = new TableColumn<>("Option");
-
+        TableColumn<Etudiant, String> select = new TableColumn<>("Sélectionner");
         TableView myTable = (TableView) loader.getNamespace().get("myTable");
-        myTable.getColumns().addAll(prenom, nom, annee, promo,option);
+        myTable.getColumns().addAll(prenom, nom, annee, promo,option,select);
 
         final ObservableList<Etudiant> data = FXCollections.observableArrayList(
                 new Etudiant("Jacob","Smith",1999,"M1","Biotech"),
@@ -53,6 +53,7 @@ public class Controller implements Initializable
         annee.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("annee"));
         promo.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("promo"));
         option.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("option"));
+        select.setCellValueFactory(new PropertyValueFactory<Etudiant,String>("select"));
 
         myTable.setItems(data);
 
