@@ -1,5 +1,6 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -8,6 +9,8 @@ import javafx.stage.Stage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+
+import javax.swing.text.html.ImageView;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -42,6 +45,12 @@ public class Controller implements Initializable
         TableColumn<Etudiant, String> option = new TableColumn<>("Option");
         TableColumn<Etudiant, String> select = new TableColumn<>("Sélectionner");
         TableView myTable = (TableView) loader.getNamespace().get("myTable");
+        Button modifyButton = (Button) loader.getNamespace().get("modifyButton");
+        Button deleteButton = (Button) loader.getNamespace().get("deleteButton");
+
+        modifyButton.setDisable(true);
+        deleteButton.setDisable(true);
+
         myTable.getColumns().addAll(prenom, nom, annee, promo,option,select);
 
         final ObservableList<Etudiant> data = FXCollections.observableArrayList(

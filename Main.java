@@ -34,6 +34,7 @@ public class Main extends Application
         stage.setTitle("GPhy");
         stage.getIcons().add(new Image("file:ressources/img/world-map.png"));
 
+        scene.getStylesheets().add("ressources/css/list.css");
         stage.setScene(scene);
 
         stage.show();
