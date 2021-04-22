@@ -5,15 +5,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-
-import javax.swing.text.html.ImageView;
+import sun.rmi.registry.RegistryImpl;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+
 
 /**
  *
@@ -27,6 +30,8 @@ public class Controller implements Initializable
 
     @FXML
     private Button listButton;
+    @FXML
+    private ImageView backBtn;
 
     public void list() throws IOException
     {
@@ -69,17 +74,22 @@ public class Controller implements Initializable
     }
 
     @FXML
-    private void addStudent() throws IOException {
+    private void addStudent(MouseEvent event) {
+            Parent root;
+            try {
+                root = FXMLLoader.load(getClass().getClassLoader().getResource("FXML/ajout.fxml"));
+                Stage stage = new Stage();
+                stage.setTitle("My New Stage Title");
+                stage.setScene(new Scene(root));
+                stage.show();
+                // Hide this current window (if this is what you want)
+                ((Node)(event.getSource())).getScene().getWindow().hide();
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ajout.fxml"));
-        Parent part = loader.load();
-        Stage stage = new Stage();
-        Scene scene = new Scene(part);
-        stage.setScene(scene);
-        stage.setTitle("Ajout Etudiant");
-        stage.show();
-
-    }
 
     @FXML
     private void delete(){
@@ -91,15 +101,20 @@ public class Controller implements Initializable
 
     }
 
-    @FXML
-    private void back() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/accueil.fxml"));
-        Parent part = loader.load();
-        Stage stage = new Stage();
-        Scene scene = new Scene(part);
-        stage.setScene(scene);
-        stage.setTitle("GPHY");
-        stage.show();
+    public void back(MouseEvent event) {
+        Parent root;
+        try {
+            root = FXMLLoader.load(getClass().getClassLoader().getResource("FXML/accueil.fxml"));
+            Stage stage = new Stage();
+            stage.setTitle("My New Stage Title");
+            stage.setScene(new Scene(root));
+            stage.show();
+            // Hide this current window (if this is what you want)
+            ((Node)(event.getSource())).getScene().getWindow().hide();
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

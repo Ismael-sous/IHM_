@@ -118,7 +118,7 @@
                   </MenuButton>
                </children>
             </Pane>
-            <ImageView fx:id="modifyButton" fitHeight="45.0" fitWidth="70.0" layoutX="26.0" layoutY="112.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="backBtn" fitHeight="45.0" fitWidth="70.0" layoutX="26.0" layoutY="112.0" onMouseClicked="#back" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../ressources/img/back.png" />
                </image>
