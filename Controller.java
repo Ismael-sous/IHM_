@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import sun.rmi.registry.RegistryImpl;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 
@@ -104,7 +105,7 @@ public class Controller implements Initializable
     public void back(MouseEvent event) {
         Parent root;
         try {
-            root = FXMLLoader.load(getClass().getClassLoader().getResource("FXML/accueil.fxml"));
+            root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("FXML/accueil.fxml")));
             Stage stage = new Stage();
             stage.setTitle("My New Stage Title");
             stage.setScene(new Scene(root));
