@@ -18,7 +18,7 @@
 
 <VBox alignment="TOP_CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
    <children>
-      <AnchorPane prefHeight="633.0" prefWidth="907.0" style="-fx-background-color: #393647;" VBox.vgrow="ALWAYS">
+      <AnchorPane onMouseClicked="#ConfirmButton" prefHeight="633.0" prefWidth="907.0" style="-fx-background-color: #393647;" VBox.vgrow="ALWAYS">
          <children>
             <Pane layoutY="14.0" prefHeight="78.0" prefWidth="868.0" style="-fx-background-color: #ededed;">
                <children>
@@ -137,7 +137,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button layoutX="506.0" layoutY="521.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="104.0" style="-fx-background-color: #393647; -fx-border-color: white;" text="Confirmer" textFill="WHITE">
+            <Button layoutX="506.0" layoutY="521.0" mnemonicParsing="false" onMouseClicked="#ConfirmButton" prefHeight="27.0" prefWidth="104.0" style="-fx-background-color: #393647; -fx-border-color: white;" text="Confirmer" textFill="WHITE">
                <font>
                   <Font name="Tahoma" size="13.0" />
                </font>

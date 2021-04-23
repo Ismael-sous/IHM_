@@ -1,5 +1,6 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -30,9 +31,12 @@ public class Controller implements Initializable
     @FXML private TableView myTable;
 
     @FXML
-    private Button listButton;
+    private Button listButton, ConfirmButton, okButton;
     @FXML
     private ImageView backBtn;
+    @FXML
+    private javafx.scene.control.Button closeButton;
+
 
     public void list() throws IOException
     {
@@ -102,21 +106,41 @@ public class Controller implements Initializable
 
     }
 
+    public void ConfirmButton (MouseEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("FXML/ConfirmationSupp.fxml"));
+        Parent part = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(part);
+        stage.setScene(scene);
+        stage.setTitle("Liste Etudiant");
+        stage.show();
+    }
+
+    @FXML
+    private void okButtonAction(){
+
+        Stage stage = (Stage) okButton.getScene().getWindow();
+        stage.close();
+    }
+
+    @FXML
     public void back(MouseEvent event) {
         Parent root;
         try {
             root = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("FXML/accueil.fxml")));
             Stage stage = new Stage();
-            stage.setTitle("My New Stage Title");
+            stage.setTitle("GPHY");
             stage.setScene(new Scene(root));
             stage.show();
-            // Hide this current window (if this is what you want)
             ((Node)(event.getSource())).getScene().getWindow().hide();
         }
         catch (IOException e) {
             e.printStackTrace();
         }
     }
+
+
+
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
